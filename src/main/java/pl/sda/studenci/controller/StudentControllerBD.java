@@ -23,7 +23,7 @@ public class StudentControllerBD {
     public ResponseEntity dodawanie (@RequestBody Student student){
         return ResponseEntity.ok(studentServiceBD.zapiszStudenta(student));
     }
-    @GetMapping (path = "/usunStudenta/{id_studenta")
+    @GetMapping (path = "/usunStudenta/{id_studenta}")
     public ResponseEntity usuwanieStudenta (@PathVariable (name="id_studenta")Long id){
         boolean sukces= studentServiceBD.usunStudenta(id);
         if(sukces){

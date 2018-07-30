@@ -35,6 +35,6 @@ public class StudentServiceBD {
     }
 
     public Optional<Student> szukajPoPeselu(String pesel) {
-        return
+        return studentRepository.findByPesel(pesel);
     }
 }
